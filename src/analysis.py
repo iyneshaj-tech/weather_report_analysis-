@@ -368,6 +368,15 @@ if date_col is not None and rainfall_col is not None:
     )
 
     plt.show()
+    # Humidity vs Temperature
+plt.figure(figsize=(8, 5))
+sns.scatterplot(data=df, x=temperature_col, y=humidity_col)
+plt.title("Humidity vs Temperature")
+plt.xlabel("Temperature")
+plt.ylabel("Humidity")
+plt.tight_layout()
+plt.savefig("../results/humidity_vs_temperature.png")
+plt.show()
 
 
 # ============================================================
